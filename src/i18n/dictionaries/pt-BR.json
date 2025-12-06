@@ -23,35 +23,75 @@
     "noResults": "Nenhum resultado encontrado",
     "error": "Erro"
   },
+  "landing": {
+    "tagline": "Acompanhamento nutricional com IA, simples e bonito",
+    "getStarted": "Começar",
+    "alreadyHaveAccount": "Já tem uma conta? Entrar",
+    "features": {
+      "simple": {
+        "title": "Simples",
+        "description": "Registre refeições com foto ou texto em segundos"
+      },
+      "beautiful": {
+        "title": "Bonito",
+        "description": "Design limpo e moderno que é um prazer usar"
+      },
+      "effective": {
+        "title": "Eficaz",
+        "description": "Insights com IA para atingir seus objetivos"
+      }
+    }
+  },
   "auth": {
-    "login": "Entrar",
-    "signup": "Cadastrar",
-    "logout": "Sair",
-    "email": "E-mail",
-    "password": "Senha",
-    "confirmPassword": "Confirmar Senha",
-    "forgotPassword": "Esqueceu a senha?",
-    "rememberMe": "Lembrar de mim",
-    "createAccount": "Criar conta",
-    "alreadyHaveAccount": "Já tem uma conta?",
-    "dontHaveAccount": "Não tem uma conta?",
-    "resetPassword": "Redefinir Senha",
-    "sendResetLink": "Enviar Link de Redefinição",
-    "checkYourEmail": "Verifique seu e-mail",
-    "resetLinkSent": "Enviamos um link de redefinição de senha para seu e-mail.",
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "Digite seu email",
+      "password": "Senha",
+      "passwordPlaceholder": "Digite sua senha",
+      "confirmPassword": "Confirmar Senha",
+      "confirmPasswordPlaceholder": "Confirme sua senha"
+    },
+    "login": {
+      "title": "Bem-vindo de Volta",
+      "subtitle": "Entre para continuar acompanhando sua nutrição",
+      "submit": "Entrar",
+      "forgotPassword": "Esqueceu a senha?",
+      "noAccount": "Não tem uma conta?",
+      "signupLink": "Cadastre-se",
+      "rememberMe": "Lembrar de mim",
+      "error": "Email ou senha inválidos"
+    },
+    "signup": {
+      "title": "Criar Conta",
+      "subtitle": "Comece sua jornada nutricional hoje",
+      "submit": "Criar Conta",
+      "hasAccount": "Já tem uma conta?",
+      "loginLink": "Entrar",
+      "acceptTerms": "Eu concordo com os",
+      "termsLink": "Termos de Serviço",
+      "error": "Não foi possível criar a conta. Tente novamente.",
+      "requirements": {
+        "minLength": "Pelo menos 8 caracteres",
+        "uppercase": "Uma letra maiúscula",
+        "number": "Um número",
+        "special": "Um caractere especial"
+      }
+    },
+    "forgotPassword": {
+      "title": "Redefinir Senha",
+      "subtitle": "Digite seu email para receber um link de redefinição",
+      "submit": "Enviar Link",
+      "backToLogin": "Voltar para login",
+      "success": "Verifique seu email para o link de redefinição"
+    },
     "errors": {
-      "invalidCredentials": "E-mail ou senha inválidos",
-      "emailRequired": "E-mail é obrigatório",
-      "emailInvalid": "Por favor, insira um e-mail válido",
+      "invalidCredentials": "Email ou senha inválidos",
+      "emailRequired": "Email é obrigatório",
+      "emailInvalid": "Por favor, digite um email válido",
       "passwordRequired": "Senha é obrigatória",
-      "passwordTooShort": "A senha deve ter pelo menos 8 caracteres",
-      "passwordNeedsUppercase": "A senha deve conter uma letra maiúscula",
-      "passwordNeedsLowercase": "A senha deve conter uma letra minúscula",
-      "passwordNeedsNumber": "A senha deve conter um número",
-      "passwordNeedsSpecial": "A senha deve conter um caractere especial",
+      "passwordTooShort": "Senha deve ter pelo menos 8 caracteres",
       "passwordsMismatch": "As senhas não coincidem",
-      "emailAlreadyUsed": "Este e-mail já está registrado",
-      "tooManyAttempts": "Muitas tentativas. Por favor, tente novamente mais tarde."
+      "emailAlreadyUsed": "Este email já está cadastrado"
     }
   },
   "onboarding": {
@@ -100,15 +140,15 @@
       "subtitle": "Personalize sua experiência",
       "units": "Sistema de Unidades",
       "metric": "Métrico (kg, cm)",
-      "imperial": "Imperial (lbs, pés/pol)",
+      "imperial": "Imperial (lbs, ft/in)",
       "language": "Idioma"
     },
     "complete": {
       "title": "Tudo Pronto!",
       "subtitle": "Com base no seu perfil, aqui está sua meta diária",
-      "calorieTarget": "Meta de Calorias Diária",
+      "calorieTarget": "Meta Diária de Calorias",
       "calories": "calorias",
-      "macros": "Distribuição de Macros",
+      "macros": "Divisão de Macros",
       "protein": "Proteína",
       "carbs": "Carboidratos",
       "fat": "Gordura",
@@ -128,7 +168,7 @@
     "calories": "{count} cal",
     "todaySummary": "Resumo de Hoje",
     "todaysMeals": "Refeições de Hoje",
-    "noMeals": "Nenhuma refeição registrada",
+    "noMeals": "Nenhuma refeição registrada ainda",
     "addFirst": "Registre sua primeira refeição!",
     "remaining": "{count} restantes",
     "over": "{count} acima",
@@ -145,32 +185,32 @@
     "editMeal": "Editar Refeição",
     "deleteMeal": "Excluir Refeição",
     "mealDeleted": "Refeição excluída",
-    "analyzing": "Analisando sua comida...",
+    "analyzing": "Analisando seu alimento...",
     "errors": {
-      "analyzeFailed": "Falha ao analisar alimento. Por favor, tente novamente.",
-      "noFoodsDetected": "Nenhum alimento detectado. Por favor, tente novamente.",
-      "saveFailed": "Falha ao salvar refeição. Por favor, tente novamente."
+      "analyzeFailed": "Falha ao analisar alimento. Tente novamente.",
+      "noFoodsDetected": "Nenhum alimento detectado. Tente novamente.",
+      "saveFailed": "Falha ao salvar refeição. Tente novamente."
     }
   },
   "weight": {
     "title": "Peso",
     "logWeight": "Registrar Peso",
     "currentWeight": "Peso Atual",
-    "goalWeight": "Peso Alvo",
+    "goalWeight": "Peso Meta",
     "progress": "Progresso",
-    "noLogs": "Nenhum registro de peso",
+    "noLogs": "Nenhum registro de peso ainda",
     "logFirst": "Registre seu primeiro peso!",
     "trend": "Tendência",
     "last7Days": "Últimos 7 Dias",
     "last30Days": "Últimos 30 Dias",
     "last90Days": "Últimos 90 Dias",
-    "change": "{value} de mudança",
+    "change": "mudança de {value}",
     "onTrack": "No Caminho Certo",
     "behindSchedule": "Atrasado",
     "aheadOfSchedule": "Adiantado",
-    "estimatedCompletion": "Conclusão estimada: {date}",
+    "estimatedCompletion": "Conclusão est.: {date}",
     "errors": {
-      "saveFailed": "Falha ao salvar peso. Por favor, tente novamente."
+      "saveFailed": "Falha ao salvar peso. Tente novamente."
     }
   },
   "settings": {
@@ -198,8 +238,8 @@
     "tryAgain": "Por favor, tente novamente",
     "pageNotFound": "Página não encontrada",
     "unauthorized": "Por favor, faça login para continuar",
-    "networkError": "Erro de rede. Por favor, verifique sua conexão.",
-    "serverError": "Erro no servidor. Por favor, tente novamente mais tarde."
+    "networkError": "Erro de rede. Verifique sua conexão.",
+    "serverError": "Erro do servidor. Tente novamente mais tarde."
   },
   "validation": {
     "required": "Este campo é obrigatório",
@@ -207,7 +247,7 @@
     "maxLength": "Deve ter no máximo {max} caracteres",
     "minValue": "Deve ser pelo menos {min}",
     "maxValue": "Deve ser no máximo {max}",
-    "invalidEmail": "Endereço de e-mail inválido",
+    "invalidEmail": "Endereço de email inválido",
     "positiveNumber": "Deve ser um número positivo"
   }
 }

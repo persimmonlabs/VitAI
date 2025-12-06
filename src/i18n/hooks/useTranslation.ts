@@ -1,26 +1,15 @@
 'use client';
 
-import { useCallback, useMemo } from 'react';
+import { useCallback, useMemo, useState, useEffect } from 'react';
 import type { Locale } from '../config';
 import en from '../dictionaries/en.json';
 import ptBR from '../dictionaries/pt-BR.json';
 
 type Dictionary = typeof en;
-type NestedKeyOf<T, K extends string = ''> = T extends object
-  ? {
-      [P in keyof T & string]: T[P] extends object
-        ? NestedKeyOf<T[P], K extends '' ? P : `${K}.${P}`>
-        : K extends ''
-        ? P
-        : `${K}.${P}`;
-    }[keyof T & string]
-  : K;
-
-type TranslationKey = NestedKeyOf<Dictionary>;
 
 const dictionaries: Record<Locale, Dictionary> = {
   en,
-  'pt-BR': ptBR,
+  'pt-BR': ptBR as Dictionary,
 };
 
 function getNestedValue(obj: unknown, path: string): string {
@@ -31,7 +20,7 @@ function getNestedValue(obj: unknown, path: string): string {
     if (value && typeof value === 'object' && key in value) {
       value = (value as Record<string, unknown>)[key];
     } else {
-      return path; // Return key if not found
+      return path;
     }
   }
 
@@ -48,11 +37,39 @@ function interpolate(
   });
 }
 
-export function useTranslation(locale: Locale = 'en') {
+const LOCALE_STORAGE_KEY = 'vitai-locale';
+
+function getStoredLocale(): Locale {
+  if (typeof window === 'undefined') return 'en';
+  try {
+    const stored = localStorage.getItem(LOCALE_STORAGE_KEY);
+    if (stored === 'en' || stored === 'pt-BR') return stored;
+  } catch {
+    // localStorage not available
+  }
+  return 'en';
+}
+
+export function useTranslation() {
+  const [locale, setLocaleState] = useState<Locale>('en');
+
+  useEffect(() => {
+    setLocaleState(getStoredLocale());
+  }, []);
+
+  const setLocale = useCallback((newLocale: Locale) => {
+    setLocaleState(newLocale);
+    try {
+      localStorage.setItem(LOCALE_STORAGE_KEY, newLocale);
+    } catch {
+      // localStorage not available
+    }
+  }, []);
+
   const dictionary = dictionaries[locale] || dictionaries.en;
 
   const t = useCallback(
-    (key: TranslationKey | string, values?: Record<string, string | number>): string => {
+    (key: string, values?: Record<string, string | number>): string => {
       const translation = getNestedValue(dictionary, key);
 
       if (values) {
@@ -96,11 +113,12 @@ export function useTranslation(locale: Locale = 'en') {
     () => ({
       t,
       locale,
+      setLocale,
       formatDate,
       formatNumber,
       formatRelativeTime,
     }),
-    [t, locale, formatDate, formatNumber, formatRelativeTime]
+    [t, locale, setLocale, formatDate, formatNumber, formatRelativeTime]
   );
 }
 

@@ -23,35 +23,75 @@
     "noResults": "No results found",
     "error": "Error"
   },
+  "landing": {
+    "tagline": "AI-powered nutrition tracking made simple and beautiful",
+    "getStarted": "Get Started",
+    "alreadyHaveAccount": "Already have an account? Sign in",
+    "features": {
+      "simple": {
+        "title": "Simple",
+        "description": "Log meals with a photo or text in seconds"
+      },
+      "beautiful": {
+        "title": "Beautiful",
+        "description": "Clean, modern design that's a joy to use"
+      },
+      "effective": {
+        "title": "Effective",
+        "description": "AI-powered insights to reach your goals"
+      }
+    }
+  },
   "auth": {
-    "login": "Log In",
-    "signup": "Sign Up",
-    "logout": "Log Out",
-    "email": "Email",
-    "password": "Password",
-    "confirmPassword": "Confirm Password",
-    "forgotPassword": "Forgot password?",
-    "rememberMe": "Remember me",
-    "createAccount": "Create account",
-    "alreadyHaveAccount": "Already have an account?",
-    "dontHaveAccount": "Don't have an account?",
-    "resetPassword": "Reset Password",
-    "sendResetLink": "Send Reset Link",
-    "checkYourEmail": "Check your email",
-    "resetLinkSent": "We've sent a password reset link to your email.",
+    "fields": {
+      "email": "Email",
+      "emailPlaceholder": "Enter your email",
+      "password": "Password",
+      "passwordPlaceholder": "Enter your password",
+      "confirmPassword": "Confirm Password",
+      "confirmPasswordPlaceholder": "Confirm your password"
+    },
+    "login": {
+      "title": "Welcome Back",
+      "subtitle": "Sign in to continue tracking your nutrition",
+      "submit": "Sign In",
+      "forgotPassword": "Forgot password?",
+      "noAccount": "Don't have an account?",
+      "signupLink": "Sign up",
+      "rememberMe": "Remember me",
+      "error": "Invalid email or password"
+    },
+    "signup": {
+      "title": "Create Account",
+      "subtitle": "Start your nutrition journey today",
+      "submit": "Create Account",
+      "hasAccount": "Already have an account?",
+      "loginLink": "Sign in",
+      "acceptTerms": "I agree to the",
+      "termsLink": "Terms of Service",
+      "error": "Could not create account. Please try again.",
+      "requirements": {
+        "minLength": "At least 8 characters",
+        "uppercase": "One uppercase letter",
+        "number": "One number",
+        "special": "One special character"
+      }
+    },
+    "forgotPassword": {
+      "title": "Reset Password",
+      "subtitle": "Enter your email to receive a reset link",
+      "submit": "Send Reset Link",
+      "backToLogin": "Back to login",
+      "success": "Check your email for a reset link"
+    },
     "errors": {
       "invalidCredentials": "Invalid email or password",
       "emailRequired": "Email is required",
       "emailInvalid": "Please enter a valid email",
       "passwordRequired": "Password is required",
       "passwordTooShort": "Password must be at least 8 characters",
-      "passwordNeedsUppercase": "Password must contain an uppercase letter",
-      "passwordNeedsLowercase": "Password must contain a lowercase letter",
-      "passwordNeedsNumber": "Password must contain a number",
-      "passwordNeedsSpecial": "Password must contain a special character",
       "passwordsMismatch": "Passwords don't match",
-      "emailAlreadyUsed": "This email is already registered",
-      "tooManyAttempts": "Too many attempts. Please try again later."
+      "emailAlreadyUsed": "This email is already registered"
     }
   },
   "onboarding": {
